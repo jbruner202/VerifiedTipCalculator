@@ -10,7 +10,7 @@ A simple tip calculator built with HTML, CSS, and JavaScript.
 
 ## AI Assistance
 
-The core calculation logic for this project was generated using an AI coding assistant. The prompt used was:
+The core calculation logic for this project was generated using an AI coding assistant (Antigravity). The prompt used was:
 
 > Act as a JavaScript developer. Write a function called "calculateBillTotals". It should accept two parameters: "bill" and "tipPercentage". The function needs to calculate:
 > 1. The tip amount (bill multiplied by tipPercentage divided by 100).
