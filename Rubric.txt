@@ -1,0 +1,121 @@
+Assignment: The Verified Tip Calculator
+Due: Wed Jul 29, 2026 11:59pmDue: Wed Jul 29, 2026 11:59pm
+Missing
+Ungraded, 100 Possible Points100 Points Possible
+Attempt
+In Progress
+NEXT UP: Submit Assignment
+Unlimited Attempts Allowed
+Available: Jul 7, 2026 12:00am until Aug 28, 2026 11:59pmAvailable: Jul 7, 2026 12:00am until Aug 28, 2026 11:59pm
+Objective
+
+You will use AI to generate the core mathematical calculation function for a tip calculator. You will then connect this function to a live HTML form using an Event Listener, capture user inputs, and thoroughly verify that the AI’s math logic handles data correctly.
+Prerequisite Setup
+
+Copy and paste this starter code into your local text editor, save it as tip-calculator.html, and open it in your browser.
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 3 Assignment: Tip Calculator</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #f4f4f9; }
+        .calculator { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 350px; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+        input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; background: #28a745; color: white; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        button:hover { background: #218838; }
+        .result-box { margin-top: 1.5rem; padding: 1rem; background: #e9ecef; border-radius: 4px; }
+        .result-line { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Tip Calculator</h2>
+        
+        <div class="form-group">
+            <label for="billAmount">Bill Amount ($):</label>
+            <input type="number" id="billAmount" placeholder="0.00" step="0.01">
+        </div>
+        
+        <div class="form-group">
+            <label for="tipPercent">Tip Percentage (%):</label>
+            <input type="number" id="tipPercent" placeholder="15" value="15">
+        </div>
+        
+        <button id="calcBtn">Calculate Total</button>
+        
+        <div class="result-box">
+            <div class="result-line"><span>Tip Amount:</span> <span id="tipResult">$0.00</span></div>
+            <div class="result-line"><strong>Total Bill:</strong> <strong id="totalResult">$0.00</strong></div>
+        </div>
+    </div>
+
+    <script>
+        // YOUR CODE WILL GO HERE
+    </script>
+</body>
+</html>
+
+Step 1: Request the Logic from AI
+
+Open your AI tool. Your goal is to get a clean function that takes the raw numbers and spits out the calculated values.
+
+Copy and paste this prompt:
+Plaintext
+
+Act as a JavaScript developer. Write a function called "calculateBillTotals". 
+It should accept two parameters: "bill" and "tipPercentage". 
+
+The function needs to calculate:
+1. The tip amount (bill multiplied by tipPercentage divided by 100).
+2. The grand total (bill plus the tip amount).
+
+The function must return an object containing both values, rounded to exactly two decimal places.
+Return only the JavaScript code. Do not include any event listeners or HTML manipulation code.
+
+Step 2: Implement and Connect
+
+    Paste the AI-generated function inside your <script> tags.
+
+    Write a 'click' event listener for the #calcBtn button.
+
+    Inside the event listener, capture the .value of #billAmount and #tipPercent.
+
+    Crucial Step: Remember that values captured from input fields are always strings in JavaScript! Pass your inputs through parseFloat() before handing them to your function so the math doesn't break.
+
+    Call your AI function, unpack the object it returns, and update the #tipResult and #totalResult elements on the page.
+
+Step 3: Verification Sandbox (Do the Math!)
+
+AI models frequently struggle with basic data types in JavaScript, sometimes concatenating strings (e.g., "50" + "10" = "5010") instead of performing mathematical addition. You must verify its accuracy.
+
+Run the three test cases below in your browser and log the results in the table:
+Test Case 	Inputs 	Expected Output 	AI Actual Output 	Status (Pass/Fail)
+Test 1 	Bill: $100.00, Tip: 15% 	Tip: $15.00 / Total: $115.00 		
+Test 2 	Bill: $43.52, Tip: 18% 	Tip: $7.83 / Total: $51.35 		
+Test 3 	Bill: $0.00, Tip: 20% 	Tip: $0.00 / Total: $0.00 		
+Assignment Submission
+
+Once you have completed the assignment, please prepare and submit the following three links:
+1. Live Website URL
+
+    Provide the live, public link to your running website
+    Before submitting: Open this link in an Incognito/Private window to verify that the page loads
+
+2. GitHub Repository URL
+
+    Submit the link to your public GitHub repository containing your files
+    Your repository should also include a brief README.md file that describes the project, how to run it, and the AI tool/prompts you used to assist with the code.
+    Ensure that your repository visibility is set to Public so that your instructors can review your code structure.
+
+3. Video Demonstration Link
+
+Provide a link to a video demonstrating your program in action (e.g., a YouTube link set to public or unlisted, Loom, or Panopto). Your video must include:
+
+    Functionality Walkthrough: A quick visual demonstration.
+    Test Cases: You must present and walk through a checklist of how your application handles different scenarios.
