@@ -4,7 +4,7 @@ A simple tip calculator built with HTML, CSS, and JavaScript.
 
 ## How to Run
 
-1. Open `tip-calculator.html` in any web browser.
+1. Open `index.html` in any web browser.
 2. Enter a bill amount and a tip percentage.
 3. Click "Calculate Total" to see the tip amount and grand total.
 
